@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Liste des films - Les Films de Plein Air</title>
+    <meta name="description" content="Le site de la maison de l'architecture">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css"> 
+
+      /* Styles de base */
+      body {
+        font-family:'Roboto', sans-serif;
+        position: relative;  
+      }
+      
+      hr{
+        border-top: 1px dashed #71C9CE;
+        margin: 0px;
+      }
+      img{
+        width:100%;
+      }
+     .bg-light{
+      background-color: #FFFFFF!important;
+      top: 0;
+      padding: 0;
+     }
+
+     .navbar-expand-lg{
+      position: fixed;
+      z-index: 1000;
+      width: 100%
+     }
+     .nav-link.active{
+      background-color:#71C9CE;
+      color:white!important; 
+    }
+
+     .nav-link:hover{
+      background-color: #CBF1F5;
+     }
+     
+     .collapse{
+      text-align: center!important;
+     }
+
+     .navbar-toggler{
+      background-color: #CBF1F5;
+     }
+
+     .navbar-nav{
+      padding-left: 50px;
+     }
+
+     .navbar-brand i{
+      color: #A6E3E9;
+     }
+     .navbar-brand{
+      font-family: 'Lobster', cursive;
+      color: #71C9CE;
+     }
+     .navbar-brand span{
+       color: #71C9CE;
+     }
+  
+     .banniere img{
+      height:400px;
+      padding-top: 40px
+     }
+
+     #titrefilm{
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+    }
+    
+    .nav-titre{
+      width: 100%;
+      text-align: center;
+    }
+
+    .nav-pills{
+      width:100%!important;
+       background-color: #E3FDFD;
+    }
+
+    .nav-pills a{
+      text-decoration: none; 
+      color: #71C9CE;
+      font-weight: bold;
+    }
+
+    .nav-pills a:hover{
+      text-decoration: none; 
+      background-color: #71C9CE;
+      color: white;
+      font-weight: bold;
+    }
+
+    .nav-pills a.active{
+      text-decoration: none; 
+      background-color: #71C9CE!important;
+      color: white!important;
+      font-weight: bold!important;
+    }
+
+
+    #barre_nav_titre{
+      width: 100%!important;
+    }
+
+     #titrefilm, #titre5aout, #titre6aout, #titre7aout, #titre8aout{
+      color: #71C9CE;
+      font-family:'Lobster', cursive;
+     }
+
+     #titre5aout{
+      padding-top: 20px;
+      padding-bottom: 20px;
+     }
+     #contenu5aout,#contenu6aout, #contenu7aout, #contenu8aout{
+      text-align: justify;
+      padding-top: 20px;
+      padding-bottom: 20px;
+     }
+     #contenu5aout h5,#contenu5aout h6, #contenu6aout h5,#contenu6aout h6,#contenu7aout h5,#contenu7aout h6,#contenu8aout h5,#contenu8aout h6{
+      color: #A6E3E9;
+      font-weight: bold;
+     }
+     .btn{
+      background-color: #A6E3E9;
+      color:white;
+     }
+
+     .btn{
+      background-color: #A6E3E9;
+      color:white;
+     }
+
+     .btn:hover{
+      background-color: #71C9CE;
+     }
+
+   #contact{
+    background-color: #71C9CE;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px;
+    margin-top: 0px;
+   }
+
+   #contact i{
+    padding-left: 10px;
+    margin-bottom: 10px;
+    color:white;
+   }
+
+    #contact a{
+    color:white;
+   }
+   
+   a:hover #facebook {
+     color: #3b5998;
+   }
+
+   a:hover #twitter {
+     color: #1dcaff;
+   }
+   
+   a:hover #instagram {
+     color: #FEDA77;
+   }
+
+   .copyright{
+    padding: 20px;
+    text-align: center;
+   }
+
+    </style>
+   
+
+  </head>
+
+  <body data-spy="scroll" data-target="#navigationdate">
+
+    <header>
+
+      <!-- Navigation
+      ================================================== -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><i class="fa fa-caret-square-o-left fa-lg" aria-hidden="true"></i> <span>Les Films de Plein Air</span> <i class="fa fa-caret-square-o-right fa-lg" aria-hidden="true"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="index.html">ACCUEIL<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="actualites.html">ACTUALITES</a>
+      <a class="nav-item nav-link" href="presentation.html">PRESENTATION DU FESTIVAL</a>
+      <a class="nav-item nav-link active" href="film.html">LISTE DES FILMS</a>
+      <a class="nav-item nav-link" href="reservation.html">RESERVATION</a>
+      <a class="nav-item nav-link" href="contact.html">CONTACT</a>
+    </div>
+    </div>
+  </div>
+  </nav>
+
+    </header>
+
+<!--_______________BANNIERE HAUTE_______________________-->
+
+<div class="banniere">
+<img src="images/img10.png">
+</div>
+
+<!--_______________TITRE FILM _______________________-->
+<div class="container" id="titrefilm">
+<h2><i class="fa fa-video-camera fa-lg" aria-hidden="true"></i>  Liste des films</h2>
+</div>
+<hr>
+
+<!--_______________NAVIGATION DATE _______________________-->
+<nav id="navigationdate" class="navbar navbar-light bg-light">
+<div class="container-fluid">
+  <ul class="nav nav-pills">
+  <div class="row" id="barre_nav_titre">
+
+   <div class="col-sm-12 col-md-3">
+     <li class="nav-titre">
+       <a class="nav-link" href="#titre5aout">5 aout</a>
+     </li>
+   </div>
+   <div class="col-sm-12 col-md-3">
+     <li class="nav-titre">
+       <a class="nav-link" href="#titre6aout">6 aout</a>
+     </li>
+   </div>
+   <div class="col-sm-12 col-md-3">
+     <li class="nav-titre">
+       <a class="nav-link" href="#titre7aout">7 aout</a>
+     </li>
+   </div>
+   <div class="col-sm-12 col-md-3">
+     <li class="nav-titre">
+       <a class="nav-link" href="#titre8aout">8 aout</a>
+     </li>
+   </div>
+  </div>
+  </ul>
+</div>
+</nav>
+<hr>
+<!--_______________TITRE 5 AOUT _______________________-->
+
+<div class="container" id="titre5aout">
+<h4><i class="fa fa-star" aria-hidden="true"></i> Programmation du 5 aout</h4>
+</div>
+<hr>
+
+<!--_______________CONTENU 5 AOUT _______________________-->
+
+<div class="container">
+  <div class="row" id="contenu5aout">
+    <div class="col-sm-12 col-md-3">
+      <img src="images_film/lepianiste.jpg">
+    </div>
+    <div class="col-sm-12 col-md-9">
+      <h5>LE PIANISTE</h5>
+      <p>Heure de programmation : 18h</p>
+      <p>Durée du film : 2h28</p>
+      <p>Réalisateur : Roman Polanski</p>
+      <p>Acteurs : Adrien Brody, Thomas Kretschmann, Emilie Fox</p>
+
+      <h6>Synopsis et détails :</h6>
+      <p>Durant la Seconde Guerre mondiale, Wladyslaw Szpilman, un célèbre pianiste juif polonais, échappe à la déportation mais se retrouve parqué dans le ghetto de Varsovie dont il partage les souffrances, les humiliations et les luttes héroïques. Il parvient à s'en échapper et se réfugie dans les ruines de la capitale. Un officier allemand, qui apprécie sa musique, l'aide et lui permet de survivre.</p>
+
+      <a href="http://www.allocine.fr/video/player_gen_cmedia=18672668&cfilm=28359.html" target="_blank"><button type="button" class="btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Bande-annonce</button></a><br /><br />
+    </div>
+
+    <hr>
+
+    <div class="col-sm-12 col-md-3">
+      <img src="images_film/lacitededieu.jpg">
+    </div>
+    <div class="col-sm-12 col-md-9">
+      <h5>LA CITE DE DIEU</h5>
+      <p>Heure de programmation : 20h</p>
+      <p>Durée du film : 2h15</p>
+      <p>Réalisateur : Fernando Meirelles</p>
+      <p>Acteurs : Alexandre Rodriguez, Leandro Firmino, Phellipe Haagensen</p>
+
+      <h6>Synopsis et détails :</h6>
+      <p>Dans une favela qui a vu le jour à Rio de Janeiro dans les années soixante, Fusée est un gamin noir, pauvre, trop fragile pour devenir hors-la-loi, mais assez malin pour ne pas se contenter d'un travail sous payé. Il grandit dans un environnement violent, mais tente de voir la réalité autrement, avec l'oeil d'un artiste. Il rêve de devenir photographe professionnel.</p>
+
+      <a href="http://www.allocine.fr/video/player_gen_cmedia=19418781&cfilm=45264.html" target="_blank"><button type="button" class="btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Bande-annonce</button></a><br /><br />
+    </div>
+    
+    <div class="col-sm-12 col-md-3">
+      <img src="images_film/blooddiamond.jpg">
+    </div>
+    <div class="col-sm-12 col-md-9">
+      <h5>BLOOD DIAMOND</h5>
+      <p>Heure de programmation : 22h</p>
+      <p>Durée du film : 2h22</p>
+      <p>Réalisateur : Edward Zwick</p>
+      <p>Acteurs : Leonardo DiCaprio, Djimon Hounsou, Jennifer Connelly</p>
+
+      <h6>Synopsis et détails :</h6>
+      <p>Alors qu'il purge une peine de prison pour ses trafics, Archer rencontre Solomon Vandy, un pêcheur d'origine Mende. Arraché à sa famille et forcé de travailler dans les mines diamantifères, ce dernier a trouvé - et caché - un diamant rose extrêmement rare. Accompagnés de Maddy Bowen, une journaliste idéaliste, les deux hommes s'embarquent pour un dangereux voyage en territoire rebelle pour récupérer le fameux caillou. Un voyage qui pourrait bien sauver la famille de Salomon et donner à Archer la seconde chance qu'il n'espérait plus.</p>
+
+      <a href="http://www.allocine.fr/video/player_gen_cmedia=18716631&cfilm=61469.html" target="_blank"><button type="button" class="btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Bande-annonce</button></a><br /><br />
+    </div>
+  </div>
+</div>
+
+<!--_______________TITRE 6 AOUT _______________________-->
+
+<div class="container" id="titre6aout">
+<h4><i class="fa fa-star" aria-hidden="true"></i> Programmation du 6 aout</h4>
+</div>
+<hr>
+
+<!--_______________CONTENU 6 AOUT _______________________-->
+
+<div class="container">
+  <div class="row" id="contenu6aout">
+    <div class="col-sm-12 col-md-3">
+      <img src="images_film/breathless.jpg">
+    </div>
+    <div class="col-sm-12 col-md-9">
+      <h5>BREATHLESS</h5>
+      <p>Heure de programmation : 18h</p>
+      <p>Durée du film : 2H10</p>
+      <p>Réalisateur : Ik-june Yang</p>
+      <p>Acteurs : Ik-june Yang, Khob-bi-kim, Hwan Lee</p>
+
+      <h6>Synopsis et détails :</h6>
+      <p>Leader impitoyable d'une bande de voyous, Sang-hoon met toute sa rage dans son métier de recouvreur de dettes. Sa vie et son quotidien sont une histoire de violence, à tel point qu'il semble incapable d'exprimer son attachement.
+      Mais le hasard met sur son chemin Yeon-hee, une jeune lycéenne, au passé étrangement similaire au sien et qui va lui tenir tête. Peu à peu, ces deux paumés vont s'apprivoiser et s'évader ensemble d'un monde fait d'inhumanité.
+      Mais Sang-hoon peut-il pardonner ? Et surtout, peut-il être pardonné ?</p>
+
+      <a href="http://www.allocine.fr/video/player_gen_cmedia=19058858&cfilm=144345.html" target="_blank"><button type="button" class="btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Bande-annonce</button></a><br /><br />
+    </div>
+
+    <div class="col-sm-12 col-md-3">
+      <img src="images_film/invictus.jpg">
+    </div>
+    <div class="col-sm-12 col-md-9">
+      <h5>INVICTUS</h5>
+      <p>Heure de programmation : 20h</p>
+      <p>Durée du film : 2H12</p>
+      <p>Réalisateur : Clint Eastwood</p>
+      <p>Acteurs : Morgan Freeman, Matt Damon, Tony Kgoroge</p>
+
+      <h6>Synopsis et détails :</h6>
+      <p>LEn 1994, l'élection de Nelson Mandela consacre la fin de l'Apartheid, mais l'Afrique du Sud reste une nation profondément divisée sur le plan racial et économique. Pour unifier le pays et donner à chaque citoyen un motif de fierté, Mandela mise sur le sport, et fait cause commune avec le capitaine de la modeste équipe de rugby sud-africaine. Leur pari : se présenter au Championnat du Monde 1995...</p>
+
+      <a href="http://www.allocine.fr/video/player_gen_cmedia=18934389&cfilm=129694.html" target="_blank"><button type="button" class="btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Bande-annonce</button></a><br /><br />
+    </div>
+
+    <div class="col-sm-12 col-md-3">
+      <img src="images_film/brucelee.jpg">
+    </div>
+    <div class="col-sm-12 col-md-9">
+      <h5>LA LEGENDE DE BRUCE LEE</h5>
+      <p>Heure de programmation : 22h</p>
+      <p>Durée du film : 2H12</p>
+      <p>Réalisateur : Inconnu</p>
+      <p>Acteurs : Bruce Lee</p>
+
+      <h6>Synopsis et détails :</h6>
+      <p>Une rétrospective consacrée à Bruce Lee pour le trentième anniversaire de sa mort : Le Jeu de la mort, La Fureur de vaincre, La Fureur du dragon et Big Boss.</p>
+
+      <a href="http://www.allocine.fr/video/player_gen_cmedia=18354165&cfilm=53319.html" target="_blank"><button type="button" class="btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Bande-annonce</button></a><br /><br />
+    </div>
+   </div>
+ </div>
+
+ <!--_______________TITRE 7 AOUT _______________________-->
+
+<div class="container" id="titre7aout">
+<h4><i class="fa fa-star" aria-hidden="true"></i> Programmation du 7 aout</h4>
+</div>
+<hr>
+
+<!--_______________CONTENU 7 AOUT _______________________-->
+
+<div class="container">
+  <div class="row" id="contenu7aout">
+    <div class="col-sm-12 col-md-3">
+      <img src="images_film/mesrine.jpg">
+    </div>
+    <div class="col-sm-12 col-md-9">
+      <h5>MESRINE : L'ENNEMI PUBLIC N°1</h5>
+      <p>Heure de programmation : 18h</p>
+      <p>Durée du film : 2h10</p>
+      <p>Réalisateur : Jean-Francois Richet</p>
+      <p>Acteurs : Vincent Cassel, Ludivine Sagnier, Mathieu Amalric</p>
+
+      <h6>Synopsis et détails :</h6>
+      <p><strong>Avertissement : des scènes, des propos ou des images peuvent heurter la sensibilité des spectateurs.</strong></p>
+      <p>Les spectaculaires actions criminelles de Jacques Mesrine que les médias introniseront "Ennemi public n°1" et que toutes les polices de France traqueront sans répit jusqu'à sa mort.</p>
+
+      <a href="http://www.allocine.fr/video/player_gen_cmedia=19443118&cfilm=51603.html" target="_blank"><button type="button" class="btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Bande-annonce</button></a><br /><br />
+    </div>
+
+    
+    <div class="col-sm-12 col-md-3">
+      <img src="images_film/willsmith.jpg">
+    </div>
+    <div class="col-sm-12 col-md-9">
+      <h5>A LA RECHERCHE DU BONHEUR</h5>
+      <p>Heure de programmation : 20h</p>
+      <p>Durée du film : 1h58</p>
+      <p>Réalisateur : Gabriel Muccino</p>
+      <p>Acteurs : Will Smith, Thandie Newton, Jaden Smith</p>
+
+      <h6>Synopsis et détails :</h6>
+      <p>Représentant de commerce, Chris Gardner a du mal à gagner sa vie. Il jongle pour s'en sortir, mais sa compagne supporte de moins en moins leur précarité. Elle finit par quitter Chris et leur petit garçon de cinq ans, Christopher.
+      Désormais seul responsable de son fils, Chris se démène pour décrocher un job, sans succès. Lorsqu'il obtient finalement un stage dans une prestigieuse firme de courtage, il se donne à fond, même si pour le moment il n'est pas payé. Incapable de régler son loyer, il se retrouve à la rue avec Christopher. Le père et le fils dorment dans des foyers ou des gares, cherchant des refuges de fortune au jour le jour.</p>
+
+      <a href="http://www.allocine.fr/video/player_gen_cmedia=18717199&cfilm=54098.html" target="_blank"><button type="button" class="btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Bande-annonce</button></a><br /><br />
+    </div>
+
+    <div class="col-sm-12 col-md-3">
+      <img src="images_film/lesinfiltres.jpg">
+    </div>
+    <div class="col-sm-12 col-md-9">
+      <h5>LES INFILTRES</h5>
+      <p>Heure de programmation : 22h</p>
+      <p>Durée du film : 2h30</p>
+      <p>Réalisateur : Martin Scorsese</p>
+      <p>Acteurs : Leonardo DiCaprio, Matt Damon, Jack Nicholson</p>
+
+      <h6>Synopsis et détails :</h6>
+      <p>A Boston, une lutte sans merci oppose la police à la pègre irlandaise.
+      Pour mettre fin au règne du parrain Frank Costello, la police infiltre son gang avec "un bleu" issu des bas quartiers, Billy Costigan.
+      Tandis que Billy s'efforce de gagner la confiance du malfrat vieillissant, Colin Sullivan entre dans la police au sein de l'Unité des Enquêtes Spéciales, chargée d'éliminer Costello. Mais Colin fonctionne en "sous-marin" et informe Costello des opérations qui se trament contre lui.</p>
+
+      <a href="http://www.allocine.fr/video/player_gen_cmedia=18703020&cfilm=55983.html" target="_blank"><button type="button" class="btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Bande-annonce</button></a><br /><br />
+    </div>
+  </div>
+</div>
+
+    <!--_______________TITRE 8 AOUT _______________________-->
+
+<div class="container" id="titre8aout">
+<h4><i class="fa fa-star" aria-hidden="true"></i> Programmation du 8 aout</h4>
+</div>
+<hr>
+
+<!--_______________CONTENU 8 AOUT _______________________-->
+
+<div class="container">
+  <div class="row" id="contenu8aout">
+    <div class="col-sm-12 col-md-3">
+      <img src="images_film/lachute.jpg">
+    </div>
+    <div class="col-sm-12 col-md-9">
+      <h5>LA CHUTE</h5>
+      <p>Heure de programmation : 18h</p>
+      <p>Durée du film : 2h30</p>
+      <p>Réalisateur : Olivier Hirschbiegel</p>
+      <p>Acteurs : Rolf Kanies, Bruno Ganz, Juliane Kohler</p>
+
+      <h6>Synopsis et détails :</h6>
+      <p>Berlin, avril 1945. Le IIIe Reich agonise. Les combats font rage dans les rues de la capitale. Hitler, accompagné de ses généraux et de ses plus proches partisans, s'est réfugié dans son bunker, situé dans les jardins de la Chancellerie.
+      A ses côtés, Traudl Junge, la secrétaire particulière du Führer, refuse de l'abandonner. Tandis qu'à l'extérieur la situation se dégrade, Hitler vit ses dernières heures et la chute du régime.</p>
+
+      <a href="http://www.allocine.fr/video/player_gen_cmedia=18374042&cfilm=58349.html" target="_blank"><button type="button" class="btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Bande-annonce</button></a><br /><br />
+    </div>
+
+    
+    <div class="col-sm-12 col-md-3">
+      <img src="images_film/septvies.jpg">
+    </div>
+    <div class="col-sm-12 col-md-9">
+      <h5>SEPT VIES</h5>
+      <p>Heure de programmation : 20h</p>
+      <p>Durée du film : 2h30</p>
+      <p>Réalisateur : Gabrielle Muccino</p>
+      <p>Acteurs : Will Smith, Rosario Dawson</p>
+
+      <h6>Synopsis et détails :</h6>
+      <p>Hanté par un secret, Ben Thomas cherche sa rédemption en transformant radicalement la vie de sept personnes qu'il ne connaît pas. Une fois son plan mis en place, plus rien ne pourra l'arrêter. C'est tout du moins ce qu'il croit. Mais Ben n'avait pas prévu qu'il tomberait amoureux de l'une de ces personnes et que c'est elle qui va le transformer...</p>
+
+      <a href="http://www.allocine.fr/video/player_gen_cmedia=18845485&cfilm=130769.html" target="_blank"><button type="button" class="btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Bande-annonce</button></a><br /><br />
+    </div>
+
+    <div class="col-sm-12 col-md-3">
+      <img src="images_film/lesinfiltres.jpg">
+    </div>
+    <div class="col-sm-12 col-md-9">
+      <h5>LA HAINE</h5>
+      <p>Heure de programmation : 22h</p>
+      <p>Durée du film : 1h35</p>
+      <p>Réalisateur : Mathieu Kssovitz</p>
+      <p>Acteurs : vincent Cassel, Hubert Koundé, Said Taghmaoui</p>
+
+      <h6>Synopsis et détails :</h6>
+      <p><strong>Interdit aux moins de 12 ans.</strong></p>
+      <p>Trois copains d'une banlieue ordinaire traînent leur ennui et leur jeunesse qui se perd. Ils vont vivre la journée la plus importante de leur vie après une nuit d'émeutes provoquée par le passage à tabac d'Abdel Ichah par un inspecteur de police lors d'un interrogatoire.</p>
+
+      <a href="http://www.allocine.fr/video/player_gen_cmedia=19365052&cfilm=12551.html" target="_blank"><button type="button" class="btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Bande-annonce</button></a><br /><br />
+    </div>
+  </div>
+</div>
+<!--____________________CONTACT______________________________-->
+   <div class="container-fluid">
+     <div class="row" id="contact">
+       <div class="col-md-12">
+         <p><h6>Suivez-nous sur les réseaux sociaux :</h6></p>
+         <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square fa-3x" aria-hidden="true" target="blank" id="facebook"></i></a>
+         <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter-square fa-3x" aria-hidden="true" target="blank" id="twitter"></i></a>
+         <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram fa-3x" aria-hidden="true" target="blank" id="instagram"></i></a>
+       </div>
+     </div>
+   </div>
+
+<!--__________TOUT DROIT RESERVES______________________________-->
+    <div class="copyright">
+    <i class="fa fa-copyright" aria-hidden="true"></i> Copyright 2018 | Hassan DOUMALI
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- Javascript de Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+    <script>
+      // Scrollspy fluide
+      $(function () {
+       $(' #navigationdate li>a').on('click', function(e) {
+       var page = $(this).attr('href'); // Page cible 
+       var speed = 800; // Durée de l'animation (en ms) 
+       $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go return false;
+  });
+      });
+     
+    </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recherche Bénévoles - Actualités</title>
+    <meta name="description" content="Le site de la maison de l'architecture">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css"> 
+
+      /* Styles de base */
+      body {
+        font-family:'Roboto', sans-serif;  
+      }
+      
+      hr{
+        border-top: 1px dashed #71C9CE;
+        margin: 0px;
+      }
+      img{
+        width:100%;
+      }
+     .bg-light{
+      background-color: #FFFFFF!important;
+      top: 0;
+      padding: 0;
+      position: fixed;
+      z-index: 1000;
+      width: 100%;
+     }
+
+     .nav-link.active{
+      background-color:#71C9CE;
+      color:white!important; 
+    }
+
+     .nav-link:hover{
+      background-color: #CBF1F5;
+     }
+     
+     .collapse{
+      text-align: center!important;
+     }
+
+     .navbar-toggler{
+      background-color: #CBF1F5;
+     }
+
+     .navbar-nav{
+      padding-left: 50px;
+     }
+     
+     .navbar-brand i{
+      color: #A6E3E9;
+     }
+     .navbar-brand{
+      font-family: 'Lobster', cursive;
+      color: #71C9CE;
+     }
+     .navbar-brand span{
+       color: #71C9CE;
+     }
+  
+    .titrearticleactualite{
+      color: #71C9CE;
+      font-family: 'Lobster', cursive;
+      padding-top: 70px;
+      padding-bottom: 20px;
+    }
+
+    #presentationarticleactualite{
+      padding-top: 20px;
+      padding-bottom: 20px;
+      text-align: justify;
+    }
+    
+    #presentationarticleactualite strong{
+      color:#71C9CE;
+    }
+    
+    #presentationarticleactualite a{
+      color:#A6E3E9;
+      text-decoration: none;
+    }
+
+    #presentationarticleactualite a:hover{
+      color:#71C9CE;
+      font-weight: bold;
+    }
+    .datearticleactualite{
+      color:#888;
+    }
+    
+    .card-body{
+      padding: 0;
+    }
+
+    .card-body h5{
+      font-family:'Lobster', cursive;
+      color: #71C9CE;
+    }
+    .card-body img{
+      padding-bottom: 10px;
+    }
+
+    .card-body a{
+      background-color:#A6E3E9;
+      color: white!important;
+      width: 100%;
+    }
+
+    .card-body a:hover{
+      text-align: center;
+      background-color:#71C9CE;
+      color: white;
+    }
+
+    .card-title{
+      text-align: center;
+    }
+    
+    #coeur{
+      color: #C60800;
+    }
+   #contact{
+    background-color: #71C9CE;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px;
+    margin-top: 0px;
+   }
+
+   #contact i{
+    padding-left: 10px;
+    margin-bottom: 10px;
+    color:white;
+   }
+
+    #contact a{
+    color:white;
+   }
+   
+   a:hover #facebook {
+     color: #3b5998;
+   }
+
+   a:hover #twitter {
+     color: #1dcaff;
+   }
+   
+   a:hover #instagram {
+     color: #FEDA77;
+   }
+
+   .copyright{
+    padding: 20px;
+    text-align: center;
+   }
+
+    </style>
+   
+
+  </head>
+
+  <body>
+
+    <header>
+
+      <!-- Navigation
+      ================================================== -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><i class="fa fa-caret-square-o-left fa-lg" aria-hidden="true"></i> <span>Les Films de Plein Air</span> <i class="fa fa-caret-square-o-right fa-lg" aria-hidden="true"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="index.html">ACCUEIL<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="actualites.html">ACTUALITES</a>
+      <a class="nav-item nav-link" href="presentation.html">PRESENTATION DU FESTIVAL</a>
+      <a class="nav-item nav-link" href="film.html">LISTE DES FILMS</a>
+      <a class="nav-item nav-link" href="reservation.html">RESERVATION</a>
+      <a class="nav-item nav-link" href="contact.html">CONTACT</a>
+    </div>
+    </div>
+  </div>
+  </nav>
+
+    </header>
+
+<!--_____________TITRE ARTICLE ACTUALITE_______________________-->
+<hr>
+<div class="container">
+  <div class="titrearticleactualite">
+  <h3><i class="fa fa-rss fa-lg" aria-hidden="true"></i></i> Recherche de bénévoles pour le Festival des Films en Plein Air</h3>
+  </div>
+</div>
+<hr>
+
+<!--____________PRESENTATION ACTUALITE_______________________-->
+<div class="container">
+  <div class="row" id="presentationarticleactualite">
+    <div class='col-sm-12 col-md-9 col-lg-9'>
+
+      <p>Vous ètes passonné(e) de cinéma et cherchez une expérience enrichissante ?<br /> L'association "Les Films de Plein Air" vous invite à intégrer l'équipe de la 1ère édition du Festival des Films de Plein Air du Parc Monceau/Paris du <strong>5 au 8 aout 2017</strong>.</p>
+      <p>Un amour partagé du cinéma, de belles rencontres et découvertes, et un véritable travail d’équipe, convivial et dynamique !</p>
+      <p>Les deux réunions à ne pas manquer !<br />
+        <ul>
+          <strong><li>Lundi 24 Juillet à 17h00</li>
+          <li>Vendredi 28 Juillet à 17h30</li></strong>
+        </ul></p>
+        
+        <p>Dans les locaux de l'Association Les Films de Plein Air.</p>
+        <p>Inscrivez-vous dès maintenant : <a href="">contact@filmsdepleinair.com</a> ou directement sur notre <a href="contact.html">site internet</a>
+        <p class="datearticleactualite"><em>Actualité publiée le 13 juillet 2017</em></p>
+    </div>
+
+    <div class="col-sm-12 col-md-3 col-lg-3">
+      <div class="">
+      <div class="card-body">
+        <h5 class="card-title">Coup de <i class="fa fa-heart" aria-hidden="true" id="coeur"></i><br />Sorties cinéma - Juillet</h5>
+        <img src="images_actualite/coupdecoeur.jpg">
+        <a href="http://www.allocine.fr/video/player_gen_cmedia=19567610&cfilm=241763.html" class="btn" target="_blank"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Bande-annonce</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!--_____________________CONTACT____________________________-->
+
+   <div class="container-fluid">
+     <div class="row" id="contact">
+       <div class="col-md-12">
+         <p><h6>Suivez-nous sur les réseaux sociaux :</h6></p>
+         <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square fa-3x" aria-hidden="true" target="blank" id="facebook"></i></a>
+         <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter-square fa-3x" aria-hidden="true" target="blank" id="twitter"></i></a>
+         <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram fa-3x" aria-hidden="true" target="blank" id="instagram"></i></a>
+       </div>
+     </div>
+   </div>
+
+<!--__________TOUT DROIT RESERVES______________________________-->
+    <div class="copyright">
+    <i class="fa fa-copyright" aria-hidden="true"></i> Copyright 2018 | Hassan DOUMALI
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- Javascript de Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+    <script>
+      // Scrollspy fluide
+      $(function () {
+      });
+    </script>
+
+  </body>
+
+</html>
